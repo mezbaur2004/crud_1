@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "4f86d0e8-35f9-4ea7-9af4-559147b20fa3",
+		"name": "ToDo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32470944"
+	},
+	"item": [
+		{
+			"name": "CreateProfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FirstName\":\"Mezbaur\",\r\n    \"LastName\":\"Rafi\",\r\n    \"EmailAddress\":\"xyz@gmail.com\",\r\n    \"MobileNumber\":\"01*********\",\r\n    \"City\":\"ctg\",\r\n    \"UserName\":\"pb449\",\r\n    \"Password\":\"pm9t\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/CreateProfile",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"CreateProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"UserName\":\"pb449\",\r\n    \"Password\":\"pm9t\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/UserLogin",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"UserLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SelectProfile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/SelectProfile",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"SelectProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProfile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FirstName\":\"Mezbaur\",\r\n    \"LastName\":\"Rafi\",\r\n    \"EmailAddress\":\"xyz@gmail.com\",\r\n    \"MobileNumber\":\"01*********\",\r\n    \"City\":\"ctg\",\r\n    \"Password\":\"pm9t\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/UpdateProfile",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"UpdateProfile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateToDo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TodoSubject\":\"TodoSubject\",\r\n    \"TodoDescription\":\"TodoDescription\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/CreateToDo",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"CreateToDo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SelectToDo",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BaseURL}}/SelectToDo",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"SelectToDo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateToDo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"TodoSubject\":\"updatedSub\",\r\n \"TodoDescription\":\"updatedDes\",\r\n \"_id\":\"65f23e79bba4d7b4e255c558\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/UpdateToDo",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"UpdateToDo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteToDo",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{Token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\":\"65f23e79bba4d7b4e255c559\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}/DeleteToDo",
+					"host": [
+						"{{BaseURL}}"
+					],
+					"path": [
+						"DeleteToDo"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseURL",
+			"value": "http://localhost:5000/api/",
+			"type": "string"
+		},
+		{
+			"key": "Token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTA0NTM0NDQsImRhdGEiOnsiX2lkIjoiNjVmMjIxMzhjNzQ1YjhlZTRlNTVkNjdkIiwiRmlyc3ROYW1lIjoiTWV6YmF1ciIsIkxhc3ROYW1lIjoiUmFmaSIsIkVtYWlsQWRkcmVzcyI6Inh5ekBnbWFpbC5jb20iLCJNb2JpbGVOdW1iZXIiOiIwMSoqKioqKioqKiIsIkNpdHkiOiJjdGciLCJVc2VyTmFtZSI6InBiNDQ5IiwiUGFzc3dvcmQiOiJwbTl0In0sImlhdCI6MTcxMDM2NzA0NH0.N1tTHl-O45fWy75He4zb9ESROpBC94ePat61wEjVdVI",
+			"type": "string"
+		}
+	]
+}
